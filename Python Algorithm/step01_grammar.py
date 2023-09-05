@@ -102,3 +102,43 @@ b=list()
 #sort : 오름차순
 #for x in enumerate(튜플로 하나하나 짝지어줌 (인덱스 번호, 값))
 #if all(60>x for x in a): > 조건이 모두 참일 경우 조건문
+
+#for index, value in enumerate(a):
+
+a=[[0]*3 for _ in range(3)]
+print(a)
+a[0][1] = 1
+print(a)
+
+#함수 만들기
+def add(a, b):
+    c = a+b 
+    print(c)
+
+add(3, 2)
+
+#소수만 출력되도록
+
+def isPrime(x):
+    for i in range(2, x):
+        if x%i==0:
+            return False
+    return True
+        
+a=[12, 13, 7, 9, 19]
+for y in a:
+    if isPrime(y):
+        print(y, end="  ")
+
+#람다 함수(익명 함수)
+def plus_one(x):
+    return x+1
+
+print(plus_one(2))
+
+plus_two = lambda x: x+2
+print(plus_two(1))
+
+a=[1, 2, 3]
+print(list(map(plus_one, a)))
+print(list(map(lambda x: x+1, a)))
