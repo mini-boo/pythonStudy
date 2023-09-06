@@ -10,3 +10,7 @@ for i in range(len(arr)):
         arrMin=arr[i]
 
 print(arrMin)
+
+for x in arr:
+    if x < arrMin:
+        arrMin=x
