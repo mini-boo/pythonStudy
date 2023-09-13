@@ -1,10 +1,11 @@
-c=map(int, input())
+Number = int(input())
+sort_list = []
 
-for i in range(c):
-    li = list(map(int, input().split()))
-    cnt = 0
-    for j in li[1:]:
-        ave=sum(li[1:])/li[0]
-        cnt += 1
-    rate = cnt / li[0] * 100
-    print('{0:0.3f}%'.format(rate))
+for i in range(Number):
+    sort_list.add(int(input()))
+
+sort_list = list(sort_list)
+sort_list.sort()
+
+for j in range(len(sort_list)):
+    print(sort_list[j])
